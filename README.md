@@ -1,2 +1,2 @@
-# spotify_sg
-A linked website to the top 200 charts for Singapore on Spotify.
+# charts
+A linked website to the top charts for Singapore on Spotify and the movies.
