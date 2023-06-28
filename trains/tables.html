@@ -3,64 +3,141 @@
 <head>
   <title>Dropdown Menu with Tables</title>
   <style>
-    .table-container {
+    .table-container1 {
       display: none;
+      width: 45%; /* Adjust the width as needed */
+      float: left;
+      margin-right: 5%; /* Adjust the margin as needed */
+    }
+    .table-container2 {
+      display: none;
+      width: 45%; /* Adjust the width as needed */
+      float: left;
+      margin-right: 5%; /* Adjust the margin as needed */
+    }
+
+    .clear {
+      clear: both;
     }
   </style>
 </head>
-<body onload="showTable('table1')">
-  <select onchange="showTable(this.value)">
-    <option value="">Select an option</option>
-    <option value="table1">Option 1</option>
-    <option value="table2">Option 2</option>
-    <option value="table3">Option 3</option>
-  </select>
-
-  <div class="table-container" id="table1">
-    <table>
-      <tr>
-        <th>Table 1 Header 1</th>
-        <th>Table 1 Header 2</th>
-      </tr>
-      <tr>
-        <td>Table 1 Data 1</td>
-        <td>Table 1 Data 2</td>
-      </tr>
-      <!-- Add more rows as needed -->
-    </table>
+<body onload="showTable1('table1'), showTable2('table4')">
+  <div>
+    <h2>Table 1</h2>
+    <select onchange="showTable1(this.value)">
+      <option value="">Select an option</option>
+      <option value="table1">Option 1</option>
+      <option value="table2">Option 2</option>
+      <option value="table3">Option 3</option>
+    </select>
+    <div class="table-container1" id="table1">
+      <table>
+        <tr>
+          <th>Table 1 Header 1</th>
+          <th>Table 1 Header 2</th>
+        </tr>
+        <tr>
+          <td>Table 1 Data 1</td>
+          <td>Table 1 Data 2</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </table>
+    </div>
+    <div class="table-container1" id="table2">
+      <table>
+        <tr>
+          <th>Table 2 Header 1</th>
+          <th>Table 1 Header 2</th>
+        </tr>
+        <tr>
+          <td>Table 1 Data 1</td>
+          <td>Table 1 Data 2</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </table>
+    </div>
+    <div class="table-container1" id="table3">
+      <table>
+        <tr>
+          <th>Table 3 Header 1</th>
+          <th>Table 1 Header 2</th>
+        </tr>
+        <tr>
+          <td>Table 1 Data 1</td>
+          <td>Table 1 Data 2</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </table>
+    </div>
   </div>
 
-  <div class="table-container" id="table2">
-    <table>
-      <tr>
-        <th>Table 2 Header 1</th>
-        <th>Table 2 Header 2</th>
-      </tr>
-      <tr>
-        <td>Table 2 Data 1</td>
-        <td>Table 2 Data 2</td>
-      </tr>
-      <!-- Add more rows as needed -->
-    </table>
+  <div>
+    <h2>Table 2</h2>
+    <select onchange="showTable2(this.value)">
+      <option value="">Select an option</option>
+      <option value="table4">Option 1</option>
+      <option value="table5">Option 2</option>
+      <option value="table6">Option 3</option>
+    </select>
+    <div class="table-container2" id="table4">
+      <table>
+        <tr>
+          <th>Table 4 Header 1</th>
+          <th>Table 2 Header 2</th>
+        </tr>
+        <tr>
+          <td>Table 2 Data 1</td>
+          <td>Table 2 Data 2</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </table>
+    </div>
+    <div class="table-container2" id="table5">
+      <table>
+        <tr>
+          <th>Table 5 Header 1</th>
+          <th>Table 2 Header 2</th>
+        </tr>
+        <tr>
+          <td>Table 2 Data 1</td>
+          <td>Table 2 Data 2</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </table>
+    </div>
+    <div class="table-container2" id="table6">
+      <table>
+        <tr>
+          <th>Table 6 Header 1</th>
+          <th>Table 2 Header 2</th>
+        </tr>
+        <tr>
+          <td>Table 2 Data 1</td>
+          <td>Table 2 Data 2</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </table>
+    </div>
   </div>
 
-  <div class="table-container" id="table3">
-    <table>
-      <tr>
-        <th>Table 3 Header 1</th>
-        <th>Table 3 Header 2</th>
-      </tr>
-      <tr>
-        <td>Table 3 Data 1</td>
-        <td>Table 3 Data 2</td>
-      </tr>
-      <!-- Add more rows as needed -->
-    </table>
-  </div>
+  <div class="clear"></div>
 
   <script>
-    function showTable(selectedValue) {
-      var tables = document.getElementsByClassName('table-container');
+    function showTable1(selectedValue) {
+      var tables = document.getElementsByClassName('table-container1');
+      for (var i = 0; i < tables.length; i++) {
+        tables[i].style.display = 'none';
+      }
+      
+      if (selectedValue) {
+        var selectedTable = document.getElementById(selectedValue);
+        if (selectedTable) {
+          selectedTable.style.display = 'block';
+        }
+      }
+    }
+    function showTable2(selectedValue) {
+      var tables = document.getElementsByClassName('table-container2');
       for (var i = 0; i < tables.length; i++) {
         tables[i].style.display = 'none';
       }
