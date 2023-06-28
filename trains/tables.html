@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Dropdown Menu with Tables</title>
+  <style>
+    .table-container {
+      display: none;
+    }
+  </style>
+</head>
+<body onload="showTable('table1')">
+  <select onchange="showTable(this.value)">
+    <option value="">Select an option</option>
+    <option value="table1">Option 1</option>
+    <option value="table2">Option 2</option>
+    <option value="table3">Option 3</option>
+  </select>
+
+  <div class="table-container" id="table1">
+    <table>
+      <tr>
+        <th>Table 1 Header 1</th>
+        <th>Table 1 Header 2</th>
+      </tr>
+      <tr>
+        <td>Table 1 Data 1</td>
+        <td>Table 1 Data 2</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </table>
+  </div>
+
+  <div class="table-container" id="table2">
+    <table>
+      <tr>
+        <th>Table 2 Header 1</th>
+        <th>Table 2 Header 2</th>
+      </tr>
+      <tr>
+        <td>Table 2 Data 1</td>
+        <td>Table 2 Data 2</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </table>
+  </div>
+
+  <div class="table-container" id="table3">
+    <table>
+      <tr>
+        <th>Table 3 Header 1</th>
+        <th>Table 3 Header 2</th>
+      </tr>
+      <tr>
+        <td>Table 3 Data 1</td>
+        <td>Table 3 Data 2</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </table>
+  </div>
+
+  <script>
+    function showTable(selectedValue) {
+      var tables = document.getElementsByClassName('table-container');
+      for (var i = 0; i < tables.length; i++) {
+        tables[i].style.display = 'none';
+      }
+      
+      if (selectedValue) {
+        var selectedTable = document.getElementById(selectedValue);
+        if (selectedTable) {
+          selectedTable.style.display = 'block';
+        }
+      }
+    }
+  </script>
+</body>
+</html>
