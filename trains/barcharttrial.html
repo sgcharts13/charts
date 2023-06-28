@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Vertical Bar Graph</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="barChart"></canvas>
+  
+  <select id="dataSelect">
+    <option value="data1">Data 1</option>
+    <option value="data2">Data 2</option>
+    <option value="data3">Data 3</option>
+  </select>
+
+  <script>
+    // Get the canvas element and create a chart context
+    var canvas = document.getElementById('barChart');
+    var ctx = canvas.getContext('2d');
+
+    // Define initial data sets
+    var data1 = [10, 20, 30, 40, 50];
+    var data2 = [30, 10, 50, 20, 40];
+    var data3 = [50, 40, 30, 20, 10];
+
+    // Create the initial chart
+    var chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'],
+        datasets: [{
+          label: 'Data 1',
+          data: data1,
+          backgroundColor: 'rgba(75, 192, 192, 0.6)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Handle the change event of the select element
+    var select = document.getElementById('dataSelect');
+    select.addEventListener('change', function() {
+      var selectedValue = select.value;
+      
+      // Update the chart's data and options
+      chart.data.datasets[0].label = selectedValue;
+      
+      if (selectedValue === 'data1') {
+        chart.data.datasets[0].data = data1;
+      } else if (selectedValue === 'data2') {
+        chart.data.datasets[0].data = data2;
+      } else if (selectedValue === 'data3') {
+        chart.data.datasets[0].data = data3;
+      }
+      
+      // Update the chart with a smooth transition
+      chart.update({
+        duration: 800, // Transition duration in milliseconds
+        easing: 'easeInOutQuart' // Easing function for the transition
+      });
+    });
+  </script>
+</body>
+</html>
