@@ -1,143 +1,187 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Forty by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PQ72PWRCWX');
+        </script>
+    <body class="is-preload">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>Home - sgcharts13</title>
-    <style>
-        header {
-            background-color: #555;
-            font-size: 32px;
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-  
-        .link {
-        color: #fff;
-        text-decoration: none;
-        }
-  
-        .link:hover {
-        color: #00FF00;
-        }
-  
-        body {
-        background-color: rgba(47, 47, 47, 1);''')
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(47, 47, 47, 1)), url("https://sgcharts13.github.io/charts/home_bg.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: black;
-        padding: 50px;
-        }
-  
-        h1 {
-        color: white;
-        }
-  
-        h2 {
-        color: white;
-        }
-  
-        h3 {
-        color: white;
-        }
-  
-        p {
-        color: white;
-        }
-  
-        th {
-        color: white;
-        }
-  
-        a {
-        color: white;
-        }
-  
-        td:not(.pos_change) {
-        color: white;
-        }
+            <!-- Wrapper -->
+            <div id="wrapper">
 
-        /*Basic structure of slider*/
-    .container{
-        width: 500px;
-        position: absolute;
-        transform: translate(-50%,-50%);
-        top: 50%;
-        left: 50%;
-        overflow: hidden;
-        border: 10px solid #ffffff;
-        border-radius: 8px;
-        box-shadow: -1px 5px 15px black;
-    }
+                <!-- Header -->
+                    <header id="header">
+                        <a href="../../main.html" class="logo"><strong>sgcharts13</strong></a>
+                        <nav>
+                            <a href="#menu">Menu</a>
+                        </nav>
+                    </header>
 
-    /*Area of images*/
-    .wrapper{
-        width: 100%;
-        display: flex;
-        animation: slide 16s infinite;
-    }
+                <!-- Menu -->
+                    <nav id="menu">
+                        <ul class="links">
+                            <li><a href="../../main.html">Home</a></li>
+                            <li><a href="../../spotify_sg/songbase_search.html">Spotify Charts</a></li>
+                            <li><a href="../../movie_sg/main.html">Movie Charts</a></li>
+                            <li><a href="../../trains/month/2023_05/EW24_NS1.html">Train Ridership</a></li>
+                        </ul>
+                    </nav>
 
-    img{
-        width: 100%;
-    }
-    /*Animation activated by keyframes*/
-    @keyframes slide{
-        0%{
-            transform: translateX(0);
-        }
-        25%{
-            transform: translateX(0);
-        }
-        30%{
-            transform: translateX(-100%);
-        }
-        50%{
-            transform: translateX(-100%);
-        }
-        55%{
-            transform: translateX(-200%);
-        }
-        75%{
-            transform: translateX(-200%);
-        }
-        80%{
-            transform: translateX(-300%);
-        }
-        100%{
-            transform: translateX(-300%);
-        }
-    }
-</style>
-</head><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-PQ72PWRCWX');
-    </script>
-<body>
-    <header>
-        <a href="https://sgcharts13.github.io/charts/main.html"><img src="https://sgcharts13.github.io/charts/logo.png" alt="Logo" class="logo" height=75 width=75></a>
-        <a href="https://sgcharts13.github.io/charts/spotify_sg/songbase_search.html" class="link">Spotify Charts</a>
-        <a href="https://sgcharts13.github.io/charts/movie_sg/main.html" class="link">Movie Charts</a>
-        <a href="https://sgcharts13.github.io/charts/trains/month/2023_05/EW24_NS1.html" class="link">Train Ridership</a>
-        <a href="https://sgcharts13.github.io/charts/main.html" class="link">Home</a>&nbsp&nbsp&nbsp
-    </header>
-    <center>
-    <h1>A place for all charts in Singapore.</h1>
-    <div><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br></div>
-    <h2>I'm curious about...</h2>
-    <h2>What Singaporeans listen to on Spotify.</h2>
-    <h3><a href="https://sgcharts13.github.io/charts/spotify_sg/query/2023_04_20.html" class="link">View Current Chart</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://sgcharts13.github.io/charts/spotify_sg/songbase_search.html" class="link">View Archive</a></h3>
-    <h2>What Singaporeans watch at the movies.</h2>
-    <h3><a href="https://sgcharts13.github.io/charts/movie_sg/week/06_15_2023.html" class="link">View Current Chart</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://sgcharts13.github.io/charts/movie_sg/main.html" class="link">View Archive</a></h3>
-    <h2>Where Singaporeans are going by taking the MRT.</h2>
-    <h3><a href="https://sgcharts13.github.io/charts/trains/month/2023_05/EW24_NS1.html" class="link">View the Busiest MRT</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://sgcharts13.github.io/charts/trains/month/2023_05/NS28.html" class="link">View Least Used MRT</a></h3>
-</body>
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>Welcome to sgcharts13!</h1>
+							</header>
+							<div class="content">
+								<p>An archive of interesting data and charts in Singapore<br />
+								from music streaming to movie watching to taking the MRT.</p>
+								<ul class="actions">
+									<li><a href="#one" class="button next scrolly">View Charts</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one" class="tiles">
+								<article>
+									<span class="image">
+										<img src="images/songbase.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="spotify_sg/songbase_search.html" class="link">Spotify Charts</a></h3>
+										<p>An archive of the top 200 songs streamed in Singapore since April 2013. Data pulled from Spotify Charts and Kworb.</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/home_bg.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="movie_sg/main.html" class="link">Movie Charts</a></h3>
+										<p>An archive of the top 10 most watched movies in Singapore since September 2008. Data pulled from CinemaOnline.</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/wordpress.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="trains/month/2023_05/EW24_NS1.html" class="link">Train Ridership</a></h3>
+										<p>An archive of the entry and exits at every MRT/LRT station, and their top origins and destinations. Data pulled from LTA DataMall.</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/trains.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="https://sgcharts13.wordpress.com" class="link">Singapore Singles 100</a></h3>
+										<p>The original sgcharts13 site, with a fan-made music chart similar to the Billboard Hot 100.</p>
+									</header>
+								</article>
+							</section>
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">information@untitled.tld</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(000) 000-0000 x12387</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>1234 Somewhere Road #5432<br />
+										Nashville, TN 00000<br />
+										United States of America</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
