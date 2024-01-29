@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,78 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02a985e1e7c6b095da213eaa7c' alt='' height=500 width=500 /><h1>For the First Time in Forever</h1><h2><td style=font-size:20px;><a href=../artist/2kHxkdiKCSnHMkhIgFBZaI.html' class='link'>Kristen Bell</a>, <a href='../artist/73Np75Wv2tju61Eo9Zw4IR.html' class='link'>Idina Menzel</a></h2><h3>2013 | 3:45</h3><h3>1 Weeks On Chart | Peak: 44 (4,976 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2014_01_05.html' class='link'>2014/01/05</a></td><td style='text-align:center;'><b>44</b></td><td style='text-align:center;'><b>4,976</b></td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/2kHxkdiKCSnHMkhIgFBZaI.html' class='link'>Kristen Bell</a>, <a href='../artist/73Np75Wv2tju61Eo9Zw4IR.html' class='link'>Idina Menzel</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02a985e1e7c6b095da213eaa7c' alt='' height=500 width=500 /><h1>For the First Time in Forever</h1><h2><td style=font-size:20px;><a href=../artist/2kHxkdiKCSnHMkhIgFBZaI.html' class='link'>Kristen Bell</a>, <a href='../artist/73Np75Wv2tju61Eo9Zw4IR.html' class='link'>Idina Menzel</a></h2><h3>2013 | 3:45</h3><h3>1 Weeks On Chart | Peak: 44 (4,976 streams)</h3><div class="interact" style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; background: url('https://i.scdn.co/image/ab67616d00001e02a985e1e7c6b095da213eaa7c') no-repeat center center fixed; background-size: cover;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2014/01/05', '2014/01/12']
+    const y_line = [44, 'NaN']
+    const y_bar = [4976, 'NaN']
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              color: 'yellow' // Customize x-axis label color
+            },
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                drawOnChartArea: false, // only want the grid lines for one axis to show up
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+        },
+        interaction: {
+          mode: 'index',
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2014_01_05.html' class='link'>2014/01/05</a></td><td style='text-align:center;'><b>44</b></td><td style='text-align:center;'><b>4,976</b></td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/2kHxkdiKCSnHMkhIgFBZaI.html' class='link'>Kristen Bell</a>, <a href='../artist/73Np75Wv2tju61Eo9Zw4IR.html' class='link'>Idina Menzel</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">
