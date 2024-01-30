@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e0290f679f713096ee0aa15247e' alt='' height=500 width=500 /><h1>Fade Away</h1><h2><td style=font-size:20px;><a href=../artist/20gsENnposVs2I4rQ5kvrf.html' class='link'>Sam Feldt</a>, <a href='../artist/0UN8vGMxWEBKNNu8NtyF96.html' class='link'>Lush & Simon</a>, <a href='../artist/2w9zwq3AktTeYYMuhMjju8.html' class='link'>INNA</a></h2><h3>2017 | 2:51</h3><h3>8 Weeks On Chart | Peak: 150 (32,079 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2017_06_22.html' class='link'>2017/06/22</a></td><td style='text-align:center;'><b>150</b></td><td style='text-align:center;'><b>32,079</b></td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_06_29.html' class='link'>2017/06/29</a></td><td style='text-align:center;'>185</td><td style='text-align:center;'>26,519</td><td style='text-align:center;color:red;'>-5,560</td><td style='text-align:center;color:red;'>-17.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_07_06.html' class='link'>2017/07/06</a></td><td style='text-align:center;'>181</td><td style='text-align:center;'>27,789</td><td style='text-align:center;color:#5FEC2F;'>+1,270</td><td style='text-align:center;color:#5FEC2F;'>+4.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_07_13.html' class='link'>2017/07/13</a></td><td style='text-align:center;'>188</td><td style='text-align:center;'>28,078</td><td style='text-align:center;color:#5FEC2F;'>+289</td><td style='text-align:center;color:#5FEC2F;'>+1.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_07_20.html' class='link'>2017/07/20</a></td><td style='text-align:center;'>194</td><td style='text-align:center;'>28,370</td><td style='text-align:center;color:#5FEC2F;'>+292</td><td style='text-align:center;color:#5FEC2F;'>+1.0%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_03.html' class='link'>2017/08/03</a></td><td style='text-align:center;'>193</td><td style='text-align:center;'>29,413</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_10.html' class='link'>2017/08/10</a></td><td style='text-align:center;'>192</td><td style='text-align:center;'>29,602</td><td style='text-align:center;color:#5FEC2F;'>+189</td><td style='text-align:center;color:#5FEC2F;'>+0.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_17.html' class='link'>2017/08/17</a></td><td style='text-align:center;'>187</td><td style='text-align:center;'>30,957</td><td style='text-align:center;color:#5FEC2F;'>+1,355</td><td style='text-align:center;color:#5FEC2F;'>+4.6%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/20gsENnposVs2I4rQ5kvrf.html' class='link'>Sam Feldt</a>, <a href='../artist/0UN8vGMxWEBKNNu8NtyF96.html' class='link'>INNA</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e0290f679f713096ee0aa15247e' alt='' height=500 width=500 /><h1>Fade Away</h1><h2><td style=font-size:20px;><a href=../artist/20gsENnposVs2I4rQ5kvrf.html' class='link'>Sam Feldt</a>, <a href='../artist/0UN8vGMxWEBKNNu8NtyF96.html' class='link'>Lush & Simon</a>, <a href='../artist/2w9zwq3AktTeYYMuhMjju8.html' class='link'>INNA</a></h2><h3>2017 | 2:51</h3><h3>8 Weeks On Chart | Peak: 150 (32,079 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2017/06/22', '2017/06/29', '2017/07/06', '2017/07/13', '2017/07/20', '2017/07/27', '2017/08/03', '2017/08/10', '2017/08/17']
+    const y_line = [150, 185, 181, 188, 194, 'NaN', 193, 192, 187]
+    const y_bar = [32079, 26519, 27789, 28078, 28370, 'NaN', 29413, 29602, 30957]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 20,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 4000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2017_06_22.html' class='link'>2017/06/22</a></td><td style='text-align:center;'><b>150</b></td><td style='text-align:center;'><b>32,079</b></td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_06_29.html' class='link'>2017/06/29</a></td><td style='text-align:center;'>185</td><td style='text-align:center;'>26,519</td><td style='text-align:center;color:red;'>-5,560</td><td style='text-align:center;color:red;'>-17.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_07_06.html' class='link'>2017/07/06</a></td><td style='text-align:center;'>181</td><td style='text-align:center;'>27,789</td><td style='text-align:center;color:#5FEC2F;'>+1,270</td><td style='text-align:center;color:#5FEC2F;'>+4.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_07_13.html' class='link'>2017/07/13</a></td><td style='text-align:center;'>188</td><td style='text-align:center;'>28,078</td><td style='text-align:center;color:#5FEC2F;'>+289</td><td style='text-align:center;color:#5FEC2F;'>+1.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_07_20.html' class='link'>2017/07/20</a></td><td style='text-align:center;'>194</td><td style='text-align:center;'>28,370</td><td style='text-align:center;color:#5FEC2F;'>+292</td><td style='text-align:center;color:#5FEC2F;'>+1.0%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_03.html' class='link'>2017/08/03</a></td><td style='text-align:center;'>193</td><td style='text-align:center;'>29,413</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_10.html' class='link'>2017/08/10</a></td><td style='text-align:center;'>192</td><td style='text-align:center;'>29,602</td><td style='text-align:center;color:#5FEC2F;'>+189</td><td style='text-align:center;color:#5FEC2F;'>+0.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_17.html' class='link'>2017/08/17</a></td><td style='text-align:center;'>187</td><td style='text-align:center;'>30,957</td><td style='text-align:center;color:#5FEC2F;'>+1,355</td><td style='text-align:center;color:#5FEC2F;'>+4.6%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/20gsENnposVs2I4rQ5kvrf.html' class='link'>Sam Feldt</a>, <a href='../artist/0UN8vGMxWEBKNNu8NtyF96.html' class='link'>INNA</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

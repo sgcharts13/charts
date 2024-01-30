@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e0237fb0680110fbb107740de5d' alt='' height=500 width=500 /><h1>Baby</h1><h2><td style=font-size:20px;><a href=../artist/6MDME20pz9RveH9rEXvrOM.html' class='link'>Clean Bandit</a>, <a href='../artist/6CwfuxIqcltXDGjfZsMd9A.html' class='link'>MARINA</a>, <a href='../artist/4V8Sr092TqfHkfAA5fXXqG.html' class='link'>Luis Fonsi</a></h2><h3>2018 | 3:25</h3><h3>8 Weeks On Chart | Peak: 69 (73,746 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2018_11_08.html' class='link'>2018/11/08</a></td><td style='text-align:center;'>113</td><td style='text-align:center;'>54,462</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2018_11_15.html' class='link'>2018/11/15</a></td><td style='text-align:center;'>73</td><td style='text-align:center;'>72,360</td><td style='text-align:center;color:#5FEC2F;'>+17,898</td><td style='text-align:center;color:#5FEC2F;'>+32.9%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_11_22.html' class='link'>2018/11/22</a></td><td style='text-align:center;'><b>69</b></td><td style='text-align:center;'><b>73,746</b></td><td style='text-align:center;color:#5FEC2F;'>+1,386</td><td style='text-align:center;color:#5FEC2F;'>+1.9%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_11_29.html' class='link'>2018/11/29</a></td><td style='text-align:center;'>75</td><td style='text-align:center;'>69,882</td><td style='text-align:center;color:red;'>-3,864</td><td style='text-align:center;color:red;'>-5.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_12_06.html' class='link'>2018/12/06</a></td><td style='text-align:center;'>70</td><td style='text-align:center;'>70,653</td><td style='text-align:center;color:#5FEC2F;'>+771</td><td style='text-align:center;color:#5FEC2F;'>+1.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_12_13.html' class='link'>2018/12/13</a></td><td style='text-align:center;'>176</td><td style='text-align:center;'>41,627</td><td style='text-align:center;color:red;'>-29,026</td><td style='text-align:center;color:red;'>-41.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_12_20.html' class='link'>2018/12/20</a></td><td style='text-align:center;'>195</td><td style='text-align:center;'>39,437</td><td style='text-align:center;color:red;'>-2,190</td><td style='text-align:center;color:red;'>-5.3%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr><tr><td style='text-align:center;'><a href='../query/2019_01_10.html' class='link'>2019/01/10</a></td><td style='text-align:center;'>194</td><td style='text-align:center;'>40,560</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/6MDME20pz9RveH9rEXvrOM.html' class='link'>Clean Bandit</a>, <a href='../artist/6CwfuxIqcltXDGjfZsMd9A.html' class='link'>Luis Fonsi</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e0237fb0680110fbb107740de5d' alt='' height=500 width=500 /><h1>Baby</h1><h2><td style=font-size:20px;><a href=../artist/6MDME20pz9RveH9rEXvrOM.html' class='link'>Clean Bandit</a>, <a href='../artist/6CwfuxIqcltXDGjfZsMd9A.html' class='link'>MARINA</a>, <a href='../artist/4V8Sr092TqfHkfAA5fXXqG.html' class='link'>Luis Fonsi</a></h2><h3>2018 | 3:25</h3><h3>8 Weeks On Chart | Peak: 69 (73,746 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2018/11/08', '2018/11/15', '2018/11/22', '2018/11/29', '2018/12/06', '2018/12/13', '2018/12/20', '2018/12/27', '2019/01/10']
+    const y_line = [113, 73, 69, 75, 70, 176, 195, 'NaN', 194]
+    const y_bar = [54462, 72360, 73746, 69882, 70653, 41627, 39437, 'NaN', 40560]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 20,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 8000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2018_11_08.html' class='link'>2018/11/08</a></td><td style='text-align:center;'>113</td><td style='text-align:center;'>54,462</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2018_11_15.html' class='link'>2018/11/15</a></td><td style='text-align:center;'>73</td><td style='text-align:center;'>72,360</td><td style='text-align:center;color:#5FEC2F;'>+17,898</td><td style='text-align:center;color:#5FEC2F;'>+32.9%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_11_22.html' class='link'>2018/11/22</a></td><td style='text-align:center;'><b>69</b></td><td style='text-align:center;'><b>73,746</b></td><td style='text-align:center;color:#5FEC2F;'>+1,386</td><td style='text-align:center;color:#5FEC2F;'>+1.9%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_11_29.html' class='link'>2018/11/29</a></td><td style='text-align:center;'>75</td><td style='text-align:center;'>69,882</td><td style='text-align:center;color:red;'>-3,864</td><td style='text-align:center;color:red;'>-5.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_12_06.html' class='link'>2018/12/06</a></td><td style='text-align:center;'>70</td><td style='text-align:center;'>70,653</td><td style='text-align:center;color:#5FEC2F;'>+771</td><td style='text-align:center;color:#5FEC2F;'>+1.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_12_13.html' class='link'>2018/12/13</a></td><td style='text-align:center;'>176</td><td style='text-align:center;'>41,627</td><td style='text-align:center;color:red;'>-29,026</td><td style='text-align:center;color:red;'>-41.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_12_20.html' class='link'>2018/12/20</a></td><td style='text-align:center;'>195</td><td style='text-align:center;'>39,437</td><td style='text-align:center;color:red;'>-2,190</td><td style='text-align:center;color:red;'>-5.3%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr><tr><td style='text-align:center;'><a href='../query/2019_01_10.html' class='link'>2019/01/10</a></td><td style='text-align:center;'>194</td><td style='text-align:center;'>40,560</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/6MDME20pz9RveH9rEXvrOM.html' class='link'>Clean Bandit</a>, <a href='../artist/6CwfuxIqcltXDGjfZsMd9A.html' class='link'>Luis Fonsi</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

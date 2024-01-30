@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e027e53dcf72f09f704e8e57d07' alt='' height=500 width=500 /><h1>Golden</h1><h2><td style=font-size:20px;><a href=../artist/7o9Nl7K1Al6NNAHX6jn6iG.html' class='link'>Travie McCoy</a>, <a href='../artist/5WUlDfRSoLAfcVSX1WnrxN.html' class='link'>Sia</a></h2><h3>2015 | 3:35</h3><h3>9 Weeks On Chart | Peak: 67 (24,587 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2015_07_02.html' class='link'>2015/07/02</a></td><td style='text-align:center;'>129</td><td style='text-align:center;'>13,869</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_09.html' class='link'>2015/07/09</a></td><td style='text-align:center;'>89</td><td style='text-align:center;'>13,094</td><td style='text-align:center;color:red;'>-775</td><td style='text-align:center;color:red;'>-5.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_16.html' class='link'>2015/07/16</a></td><td style='text-align:center;'>78</td><td style='text-align:center;'>9,030</td><td style='text-align:center;color:red;'>-4,064</td><td style='text-align:center;color:red;'>-31.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_23.html' class='link'>2015/07/23</a></td><td style='text-align:center;'>70</td><td style='text-align:center;'>23,127</td><td style='text-align:center;color:#5FEC2F;'>+14,097</td><td style='text-align:center;color:#5FEC2F;'>+156.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_30.html' class='link'>2015/07/30</a></td><td style='text-align:center;'><b>67</b></td><td style='text-align:center;'>13,222</td><td style='text-align:center;color:red;'>-9,905</td><td style='text-align:center;color:red;'>-42.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_06.html' class='link'>2015/08/06</a></td><td style='text-align:center;'>68</td><td style='text-align:center;'>24,366</td><td style='text-align:center;color:#5FEC2F;'>+11,144</td><td style='text-align:center;color:#5FEC2F;'>+84.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_13.html' class='link'>2015/08/13</a></td><td style='text-align:center;'>71</td><td style='text-align:center;'>22,859</td><td style='text-align:center;color:red;'>-1,507</td><td style='text-align:center;color:red;'>-6.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_20.html' class='link'>2015/08/20</a></td><td style='text-align:center;'>69</td><td style='text-align:center;'><b>24,587</b></td><td style='text-align:center;color:#5FEC2F;'>+1,728</td><td style='text-align:center;color:#5FEC2F;'>+7.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_27.html' class='link'>2015/08/27</a></td><td style='text-align:center;'>192</td><td style='text-align:center;'>11,898</td><td style='text-align:center;color:red;'>-12,689</td><td style='text-align:center;color:red;'>-51.6%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/7o9Nl7K1Al6NNAHX6jn6iG.html' class='link'>Travie McCoy</a>, <a href='../artist/5WUlDfRSoLAfcVSX1WnrxN.html' class='link'>Sia</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e027e53dcf72f09f704e8e57d07' alt='' height=500 width=500 /><h1>Golden</h1><h2><td style=font-size:20px;><a href=../artist/7o9Nl7K1Al6NNAHX6jn6iG.html' class='link'>Travie McCoy</a>, <a href='../artist/5WUlDfRSoLAfcVSX1WnrxN.html' class='link'>Sia</a></h2><h3>2015 | 3:35</h3><h3>9 Weeks On Chart | Peak: 67 (24,587 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2015/07/02', '2015/07/09', '2015/07/16', '2015/07/23', '2015/07/30', '2015/08/06', '2015/08/13', '2015/08/20', '2015/08/27']
+    const y_line = [129, 89, 78, 70, 67, 68, 71, 69, 192]
+    const y_bar = [13869, 13094, 9030, 23127, 13222, 24366, 22859, 24587, 11898]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 20,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 3000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2015_07_02.html' class='link'>2015/07/02</a></td><td style='text-align:center;'>129</td><td style='text-align:center;'>13,869</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_09.html' class='link'>2015/07/09</a></td><td style='text-align:center;'>89</td><td style='text-align:center;'>13,094</td><td style='text-align:center;color:red;'>-775</td><td style='text-align:center;color:red;'>-5.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_16.html' class='link'>2015/07/16</a></td><td style='text-align:center;'>78</td><td style='text-align:center;'>9,030</td><td style='text-align:center;color:red;'>-4,064</td><td style='text-align:center;color:red;'>-31.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_23.html' class='link'>2015/07/23</a></td><td style='text-align:center;'>70</td><td style='text-align:center;'>23,127</td><td style='text-align:center;color:#5FEC2F;'>+14,097</td><td style='text-align:center;color:#5FEC2F;'>+156.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_30.html' class='link'>2015/07/30</a></td><td style='text-align:center;'><b>67</b></td><td style='text-align:center;'>13,222</td><td style='text-align:center;color:red;'>-9,905</td><td style='text-align:center;color:red;'>-42.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_06.html' class='link'>2015/08/06</a></td><td style='text-align:center;'>68</td><td style='text-align:center;'>24,366</td><td style='text-align:center;color:#5FEC2F;'>+11,144</td><td style='text-align:center;color:#5FEC2F;'>+84.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_13.html' class='link'>2015/08/13</a></td><td style='text-align:center;'>71</td><td style='text-align:center;'>22,859</td><td style='text-align:center;color:red;'>-1,507</td><td style='text-align:center;color:red;'>-6.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_20.html' class='link'>2015/08/20</a></td><td style='text-align:center;'>69</td><td style='text-align:center;'><b>24,587</b></td><td style='text-align:center;color:#5FEC2F;'>+1,728</td><td style='text-align:center;color:#5FEC2F;'>+7.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_27.html' class='link'>2015/08/27</a></td><td style='text-align:center;'>192</td><td style='text-align:center;'>11,898</td><td style='text-align:center;color:red;'>-12,689</td><td style='text-align:center;color:red;'>-51.6%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/7o9Nl7K1Al6NNAHX6jn6iG.html' class='link'>Travie McCoy</a>, <a href='../artist/5WUlDfRSoLAfcVSX1WnrxN.html' class='link'>Sia</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

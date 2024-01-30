@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02b314703330d32200594c8e38' alt='' height=500 width=500 /><h1>WE LIKE 2 PARTY</h1><h2><td style=font-size:20px;><a href='../artist/4Kxlr1PRlDKEB0ekOCyHgX.html' class='link'>BIGBANG</a></h2><h3>2015 | 3:15</h3><h3>12 Weeks On Chart | Peak: 62 (22,340 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2015_06_11.html' class='link'>2015/06/11</a></td><td style='text-align:center;'><b>62</b></td><td style='text-align:center;'><b>22,340</b></td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2015_06_18.html' class='link'>2015/06/18</a></td><td style='text-align:center;'>94</td><td style='text-align:center;'>17,838</td><td style='text-align:center;color:red;'>-4,502</td><td style='text-align:center;color:red;'>-20.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_06_25.html' class='link'>2015/06/25</a></td><td style='text-align:center;'>108</td><td style='text-align:center;'>16,554</td><td style='text-align:center;color:red;'>-1,284</td><td style='text-align:center;color:red;'>-7.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_02.html' class='link'>2015/07/02</a></td><td style='text-align:center;'>107</td><td style='text-align:center;'>16,046</td><td style='text-align:center;color:red;'>-508</td><td style='text-align:center;color:red;'>-3.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_09.html' class='link'>2015/07/09</a></td><td style='text-align:center;'>113</td><td style='text-align:center;'>10,962</td><td style='text-align:center;color:red;'>-5,084</td><td style='text-align:center;color:red;'>-31.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_16.html' class='link'>2015/07/16</a></td><td style='text-align:center;'>121</td><td style='text-align:center;'>6,391</td><td style='text-align:center;color:red;'>-4,571</td><td style='text-align:center;color:red;'>-41.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_23.html' class='link'>2015/07/23</a></td><td style='text-align:center;'>114</td><td style='text-align:center;'>16,442</td><td style='text-align:center;color:#5FEC2F;'>+10,051</td><td style='text-align:center;color:#5FEC2F;'>+157.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_30.html' class='link'>2015/07/30</a></td><td style='text-align:center;'>136</td><td style='text-align:center;'>7,909</td><td style='text-align:center;color:red;'>-8,533</td><td style='text-align:center;color:red;'>-51.9%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_06.html' class='link'>2015/08/06</a></td><td style='text-align:center;'>140</td><td style='text-align:center;'>14,043</td><td style='text-align:center;color:#5FEC2F;'>+6,134</td><td style='text-align:center;color:#5FEC2F;'>+77.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_13.html' class='link'>2015/08/13</a></td><td style='text-align:center;'>131</td><td style='text-align:center;'>14,566</td><td style='text-align:center;color:#5FEC2F;'>+523</td><td style='text-align:center;color:#5FEC2F;'>+3.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_20.html' class='link'>2015/08/20</a></td><td style='text-align:center;'>165</td><td style='text-align:center;'>13,468</td><td style='text-align:center;color:red;'>-1,098</td><td style='text-align:center;color:red;'>-7.5%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_27.html' class='link'>2015/08/27</a></td><td style='text-align:center;'>188</td><td style='text-align:center;'>11,960</td><td style='text-align:center;color:red;'>-1,508</td><td style='text-align:center;color:red;'>-11.2%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/4Kxlr1PRlDKEB0ekOCyHgX.html' class='link'>BIGBANG</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02b314703330d32200594c8e38' alt='' height=500 width=500 /><h1>WE LIKE 2 PARTY</h1><h2><td style=font-size:20px;><a href='../artist/4Kxlr1PRlDKEB0ekOCyHgX.html' class='link'>BIGBANG</a></h2><h3>2015 | 3:15</h3><h3>12 Weeks On Chart | Peak: 62 (22,340 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2015/06/11', '2015/06/18', '2015/06/25', '2015/07/02', '2015/07/09', '2015/07/16', '2015/07/23', '2015/07/30', '2015/08/06', '2015/08/13', '2015/08/20', '2015/08/27']
+    const y_line = [62, 94, 108, 107, 113, 121, 114, 136, 140, 131, 165, 188]
+    const y_bar = [22340, 17838, 16554, 16046, 10962, 6391, 16442, 7909, 14043, 14566, 13468, 11960]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 20,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 3000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2015_06_11.html' class='link'>2015/06/11</a></td><td style='text-align:center;'><b>62</b></td><td style='text-align:center;'><b>22,340</b></td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2015_06_18.html' class='link'>2015/06/18</a></td><td style='text-align:center;'>94</td><td style='text-align:center;'>17,838</td><td style='text-align:center;color:red;'>-4,502</td><td style='text-align:center;color:red;'>-20.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_06_25.html' class='link'>2015/06/25</a></td><td style='text-align:center;'>108</td><td style='text-align:center;'>16,554</td><td style='text-align:center;color:red;'>-1,284</td><td style='text-align:center;color:red;'>-7.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_02.html' class='link'>2015/07/02</a></td><td style='text-align:center;'>107</td><td style='text-align:center;'>16,046</td><td style='text-align:center;color:red;'>-508</td><td style='text-align:center;color:red;'>-3.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_09.html' class='link'>2015/07/09</a></td><td style='text-align:center;'>113</td><td style='text-align:center;'>10,962</td><td style='text-align:center;color:red;'>-5,084</td><td style='text-align:center;color:red;'>-31.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_16.html' class='link'>2015/07/16</a></td><td style='text-align:center;'>121</td><td style='text-align:center;'>6,391</td><td style='text-align:center;color:red;'>-4,571</td><td style='text-align:center;color:red;'>-41.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_23.html' class='link'>2015/07/23</a></td><td style='text-align:center;'>114</td><td style='text-align:center;'>16,442</td><td style='text-align:center;color:#5FEC2F;'>+10,051</td><td style='text-align:center;color:#5FEC2F;'>+157.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_07_30.html' class='link'>2015/07/30</a></td><td style='text-align:center;'>136</td><td style='text-align:center;'>7,909</td><td style='text-align:center;color:red;'>-8,533</td><td style='text-align:center;color:red;'>-51.9%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_06.html' class='link'>2015/08/06</a></td><td style='text-align:center;'>140</td><td style='text-align:center;'>14,043</td><td style='text-align:center;color:#5FEC2F;'>+6,134</td><td style='text-align:center;color:#5FEC2F;'>+77.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_13.html' class='link'>2015/08/13</a></td><td style='text-align:center;'>131</td><td style='text-align:center;'>14,566</td><td style='text-align:center;color:#5FEC2F;'>+523</td><td style='text-align:center;color:#5FEC2F;'>+3.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_20.html' class='link'>2015/08/20</a></td><td style='text-align:center;'>165</td><td style='text-align:center;'>13,468</td><td style='text-align:center;color:red;'>-1,098</td><td style='text-align:center;color:red;'>-7.5%</td></tr><tr><td style='text-align:center;'><a href='../query/2015_08_27.html' class='link'>2015/08/27</a></td><td style='text-align:center;'>188</td><td style='text-align:center;'>11,960</td><td style='text-align:center;color:red;'>-1,508</td><td style='text-align:center;color:red;'>-11.2%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/4Kxlr1PRlDKEB0ekOCyHgX.html' class='link'>BIGBANG</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

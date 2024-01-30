@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02eb4121feca968298ac9e2720' alt='' height=500 width=500 /><h1>Boys</h1><h2><td style=font-size:20px;><a href='../artist/25uiPmTg16RbhZWAqwLBy5.html' class='link'>Charli XCX</a></h2><h3>2017 | 2:42</h3><h3>9 Weeks On Chart | Peak: 70 (61,264 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2017_08_03.html' class='link'>2017/08/03</a></td><td style='text-align:center;'>76</td><td style='text-align:center;'>60,416</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_10.html' class='link'>2017/08/10</a></td><td style='text-align:center;'><b>70</b></td><td style='text-align:center;'><b>61,264</b></td><td style='text-align:center;color:#5FEC2F;'>+848</td><td style='text-align:center;color:#5FEC2F;'>+1.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_17.html' class='link'>2017/08/17</a></td><td style='text-align:center;'>74</td><td style='text-align:center;'>59,328</td><td style='text-align:center;color:red;'>-1,936</td><td style='text-align:center;color:red;'>-3.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_24.html' class='link'>2017/08/24</a></td><td style='text-align:center;'>83</td><td style='text-align:center;'>54,772</td><td style='text-align:center;color:red;'>-4,556</td><td style='text-align:center;color:red;'>-7.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_31.html' class='link'>2017/08/31</a></td><td style='text-align:center;'>88</td><td style='text-align:center;'>50,845</td><td style='text-align:center;color:red;'>-3,927</td><td style='text-align:center;color:red;'>-7.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_09_07.html' class='link'>2017/09/07</a></td><td style='text-align:center;'>89</td><td style='text-align:center;'>51,712</td><td style='text-align:center;color:#5FEC2F;'>+867</td><td style='text-align:center;color:#5FEC2F;'>+1.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_09_14.html' class='link'>2017/09/14</a></td><td style='text-align:center;'>101</td><td style='text-align:center;'>49,229</td><td style='text-align:center;color:red;'>-2,483</td><td style='text-align:center;color:red;'>-4.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_09_21.html' class='link'>2017/09/21</a></td><td style='text-align:center;'>115</td><td style='text-align:center;'>46,547</td><td style='text-align:center;color:red;'>-2,682</td><td style='text-align:center;color:red;'>-5.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_09_28.html' class='link'>2017/09/28</a></td><td style='text-align:center;'>170</td><td style='text-align:center;'>34,424</td><td style='text-align:center;color:red;'>-12,123</td><td style='text-align:center;color:red;'>-26.0%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/25uiPmTg16RbhZWAqwLBy5.html' class='link'>Charli XCX</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02eb4121feca968298ac9e2720' alt='' height=500 width=500 /><h1>Boys</h1><h2><td style=font-size:20px;><a href='../artist/25uiPmTg16RbhZWAqwLBy5.html' class='link'>Charli XCX</a></h2><h3>2017 | 2:42</h3><h3>9 Weeks On Chart | Peak: 70 (61,264 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2017/08/03', '2017/08/10', '2017/08/17', '2017/08/24', '2017/08/31', '2017/09/07', '2017/09/14', '2017/09/21', '2017/09/28']
+    const y_line = [76, 70, 74, 83, 88, 89, 101, 115, 170]
+    const y_bar = [60416, 61264, 59328, 54772, 50845, 51712, 49229, 46547, 34424]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 20,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 7000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2017_08_03.html' class='link'>2017/08/03</a></td><td style='text-align:center;'>76</td><td style='text-align:center;'>60,416</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_10.html' class='link'>2017/08/10</a></td><td style='text-align:center;'><b>70</b></td><td style='text-align:center;'><b>61,264</b></td><td style='text-align:center;color:#5FEC2F;'>+848</td><td style='text-align:center;color:#5FEC2F;'>+1.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_17.html' class='link'>2017/08/17</a></td><td style='text-align:center;'>74</td><td style='text-align:center;'>59,328</td><td style='text-align:center;color:red;'>-1,936</td><td style='text-align:center;color:red;'>-3.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_24.html' class='link'>2017/08/24</a></td><td style='text-align:center;'>83</td><td style='text-align:center;'>54,772</td><td style='text-align:center;color:red;'>-4,556</td><td style='text-align:center;color:red;'>-7.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_08_31.html' class='link'>2017/08/31</a></td><td style='text-align:center;'>88</td><td style='text-align:center;'>50,845</td><td style='text-align:center;color:red;'>-3,927</td><td style='text-align:center;color:red;'>-7.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_09_07.html' class='link'>2017/09/07</a></td><td style='text-align:center;'>89</td><td style='text-align:center;'>51,712</td><td style='text-align:center;color:#5FEC2F;'>+867</td><td style='text-align:center;color:#5FEC2F;'>+1.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_09_14.html' class='link'>2017/09/14</a></td><td style='text-align:center;'>101</td><td style='text-align:center;'>49,229</td><td style='text-align:center;color:red;'>-2,483</td><td style='text-align:center;color:red;'>-4.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_09_21.html' class='link'>2017/09/21</a></td><td style='text-align:center;'>115</td><td style='text-align:center;'>46,547</td><td style='text-align:center;color:red;'>-2,682</td><td style='text-align:center;color:red;'>-5.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_09_28.html' class='link'>2017/09/28</a></td><td style='text-align:center;'>170</td><td style='text-align:center;'>34,424</td><td style='text-align:center;color:red;'>-12,123</td><td style='text-align:center;color:red;'>-26.0%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/25uiPmTg16RbhZWAqwLBy5.html' class='link'>Charli XCX</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

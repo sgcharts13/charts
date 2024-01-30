@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e023051b461f8a5eea41658514d' alt='' height=500 width=500 /><h1>Baby Don't Lie</h1><h2><td style=font-size:20px;><a href='../artist/4yiQZ8tQPux8cPriYMWUFP.html' class='link'>Gwen Stefani</a></h2><h3>2014 | 3:22</h3><h3>8 Weeks On Chart | Peak: 31 (34,897 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2014_10_26.html' class='link'>2014/10/26</a></td><td style='text-align:center;'>121</td><td style='text-align:center;'>10,231</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2014_11_02.html' class='link'>2014/11/02</a></td><td style='text-align:center;'>58</td><td style='text-align:center;'>20,150</td><td style='text-align:center;color:#5FEC2F;'>+9,919</td><td style='text-align:center;color:#5FEC2F;'>+97.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_11_09.html' class='link'>2014/11/09</a></td><td style='text-align:center;'>40</td><td style='text-align:center;'>29,644</td><td style='text-align:center;color:#5FEC2F;'>+9,494</td><td style='text-align:center;color:#5FEC2F;'>+47.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_11_16.html' class='link'>2014/11/16</a></td><td style='text-align:center;'><b>31</b></td><td style='text-align:center;'><b>34,897</b></td><td style='text-align:center;color:#5FEC2F;'>+5,253</td><td style='text-align:center;color:#5FEC2F;'>+17.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_11_23.html' class='link'>2014/11/23</a></td><td style='text-align:center;'>34</td><td style='text-align:center;'>33,674</td><td style='text-align:center;color:red;'>-1,223</td><td style='text-align:center;color:red;'>-3.5%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_11_30.html' class='link'>2014/11/30</a></td><td style='text-align:center;'>34</td><td style='text-align:center;'>33,039</td><td style='text-align:center;color:red;'>-635</td><td style='text-align:center;color:red;'>-1.9%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_12_07.html' class='link'>2014/12/07</a></td><td style='text-align:center;'>85</td><td style='text-align:center;'>15,830</td><td style='text-align:center;color:red;'>-17,209</td><td style='text-align:center;color:red;'>-52.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_12_14.html' class='link'>2014/12/14</a></td><td style='text-align:center;'>158</td><td style='text-align:center;'>7,542</td><td style='text-align:center;color:red;'>-8,288</td><td style='text-align:center;color:red;'>-52.4%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/4yiQZ8tQPux8cPriYMWUFP.html' class='link'>Gwen Stefani</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e023051b461f8a5eea41658514d' alt='' height=500 width=500 /><h1>Baby Don't Lie</h1><h2><td style=font-size:20px;><a href='../artist/4yiQZ8tQPux8cPriYMWUFP.html' class='link'>Gwen Stefani</a></h2><h3>2014 | 3:22</h3><h3>8 Weeks On Chart | Peak: 31 (34,897 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2014/10/26', '2014/11/02', '2014/11/09', '2014/11/16', '2014/11/23', '2014/11/30', '2014/12/07', '2014/12/14']
+    const y_line = [121, 58, 40, 31, 34, 34, 85, 158]
+    const y_bar = [10231, 20150, 29644, 34897, 33674, 33039, 15830, 7542]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 20,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 4000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2014_10_26.html' class='link'>2014/10/26</a></td><td style='text-align:center;'>121</td><td style='text-align:center;'>10,231</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2014_11_02.html' class='link'>2014/11/02</a></td><td style='text-align:center;'>58</td><td style='text-align:center;'>20,150</td><td style='text-align:center;color:#5FEC2F;'>+9,919</td><td style='text-align:center;color:#5FEC2F;'>+97.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_11_09.html' class='link'>2014/11/09</a></td><td style='text-align:center;'>40</td><td style='text-align:center;'>29,644</td><td style='text-align:center;color:#5FEC2F;'>+9,494</td><td style='text-align:center;color:#5FEC2F;'>+47.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_11_16.html' class='link'>2014/11/16</a></td><td style='text-align:center;'><b>31</b></td><td style='text-align:center;'><b>34,897</b></td><td style='text-align:center;color:#5FEC2F;'>+5,253</td><td style='text-align:center;color:#5FEC2F;'>+17.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_11_23.html' class='link'>2014/11/23</a></td><td style='text-align:center;'>34</td><td style='text-align:center;'>33,674</td><td style='text-align:center;color:red;'>-1,223</td><td style='text-align:center;color:red;'>-3.5%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_11_30.html' class='link'>2014/11/30</a></td><td style='text-align:center;'>34</td><td style='text-align:center;'>33,039</td><td style='text-align:center;color:red;'>-635</td><td style='text-align:center;color:red;'>-1.9%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_12_07.html' class='link'>2014/12/07</a></td><td style='text-align:center;'>85</td><td style='text-align:center;'>15,830</td><td style='text-align:center;color:red;'>-17,209</td><td style='text-align:center;color:red;'>-52.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2014_12_14.html' class='link'>2014/12/14</a></td><td style='text-align:center;'>158</td><td style='text-align:center;'>7,542</td><td style='text-align:center;color:red;'>-8,288</td><td style='text-align:center;color:red;'>-52.4%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/4yiQZ8tQPux8cPriYMWUFP.html' class='link'>Gwen Stefani</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

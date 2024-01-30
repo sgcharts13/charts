@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02a5c7151899ae5da4f4382d54' alt='' height=500 width=500 /><h1>Look Back At It</h1><h2><td style=font-size:20px;><a href='../artist/31W5EY0aAly4Qieq6OFu6I.html' class='link'>A Boogie Wit da Hoodie</a></h2><h3>2018 | 2:59</h3><h3>9 Weeks On Chart | Peak: 60 (76,819 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2019_01_03.html' class='link'>2019/01/03</a></td><td style='text-align:center;'>191</td><td style='text-align:center;'>38,440</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2019_01_10.html' class='link'>2019/01/10</a></td><td style='text-align:center;'>107</td><td style='text-align:center;'>57,546</td><td style='text-align:center;color:#5FEC2F;'>+19,106</td><td style='text-align:center;color:#5FEC2F;'>+49.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_01_17.html' class='link'>2019/01/17</a></td><td style='text-align:center;'>86</td><td style='text-align:center;'>68,686</td><td style='text-align:center;color:#5FEC2F;'>+11,140</td><td style='text-align:center;color:#5FEC2F;'>+19.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_01_24.html' class='link'>2019/01/24</a></td><td style='text-align:center;'>79</td><td style='text-align:center;'>72,161</td><td style='text-align:center;color:#5FEC2F;'>+3,475</td><td style='text-align:center;color:#5FEC2F;'>+5.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_01_31.html' class='link'>2019/01/31</a></td><td style='text-align:center;'>73</td><td style='text-align:center;'><b>76,819</b></td><td style='text-align:center;color:#5FEC2F;'>+4,658</td><td style='text-align:center;color:#5FEC2F;'>+6.5%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_02_07.html' class='link'>2019/02/07</a></td><td style='text-align:center;'><b>60</b></td><td style='text-align:center;'>74,008</td><td style='text-align:center;color:red;'>-2,811</td><td style='text-align:center;color:red;'>-3.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_02_14.html' class='link'>2019/02/14</a></td><td style='text-align:center;'>87</td><td style='text-align:center;'>70,129</td><td style='text-align:center;color:red;'>-3,879</td><td style='text-align:center;color:red;'>-5.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_02_21.html' class='link'>2019/02/21</a></td><td style='text-align:center;'>135</td><td style='text-align:center;'>55,273</td><td style='text-align:center;color:red;'>-14,856</td><td style='text-align:center;color:red;'>-21.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_02_28.html' class='link'>2019/02/28</a></td><td style='text-align:center;'>178</td><td style='text-align:center;'>46,143</td><td style='text-align:center;color:red;'>-9,130</td><td style='text-align:center;color:red;'>-16.5%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/31W5EY0aAly4Qieq6OFu6I.html' class='link'>A Boogie Wit da Hoodie</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02a5c7151899ae5da4f4382d54' alt='' height=500 width=500 /><h1>Look Back At It</h1><h2><td style=font-size:20px;><a href='../artist/31W5EY0aAly4Qieq6OFu6I.html' class='link'>A Boogie Wit da Hoodie</a></h2><h3>2018 | 2:59</h3><h3>9 Weeks On Chart | Peak: 60 (76,819 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2019/01/03', '2019/01/10', '2019/01/17', '2019/01/24', '2019/01/31', '2019/02/07', '2019/02/14', '2019/02/21', '2019/02/28']
+    const y_line = [191, 107, 86, 79, 73, 60, 87, 135, 178]
+    const y_bar = [38440, 57546, 68686, 72161, 76819, 74008, 70129, 55273, 46143]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 20,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 8000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2019_01_03.html' class='link'>2019/01/03</a></td><td style='text-align:center;'>191</td><td style='text-align:center;'>38,440</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2019_01_10.html' class='link'>2019/01/10</a></td><td style='text-align:center;'>107</td><td style='text-align:center;'>57,546</td><td style='text-align:center;color:#5FEC2F;'>+19,106</td><td style='text-align:center;color:#5FEC2F;'>+49.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_01_17.html' class='link'>2019/01/17</a></td><td style='text-align:center;'>86</td><td style='text-align:center;'>68,686</td><td style='text-align:center;color:#5FEC2F;'>+11,140</td><td style='text-align:center;color:#5FEC2F;'>+19.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_01_24.html' class='link'>2019/01/24</a></td><td style='text-align:center;'>79</td><td style='text-align:center;'>72,161</td><td style='text-align:center;color:#5FEC2F;'>+3,475</td><td style='text-align:center;color:#5FEC2F;'>+5.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_01_31.html' class='link'>2019/01/31</a></td><td style='text-align:center;'>73</td><td style='text-align:center;'><b>76,819</b></td><td style='text-align:center;color:#5FEC2F;'>+4,658</td><td style='text-align:center;color:#5FEC2F;'>+6.5%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_02_07.html' class='link'>2019/02/07</a></td><td style='text-align:center;'><b>60</b></td><td style='text-align:center;'>74,008</td><td style='text-align:center;color:red;'>-2,811</td><td style='text-align:center;color:red;'>-3.7%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_02_14.html' class='link'>2019/02/14</a></td><td style='text-align:center;'>87</td><td style='text-align:center;'>70,129</td><td style='text-align:center;color:red;'>-3,879</td><td style='text-align:center;color:red;'>-5.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_02_21.html' class='link'>2019/02/21</a></td><td style='text-align:center;'>135</td><td style='text-align:center;'>55,273</td><td style='text-align:center;color:red;'>-14,856</td><td style='text-align:center;color:red;'>-21.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2019_02_28.html' class='link'>2019/02/28</a></td><td style='text-align:center;'>178</td><td style='text-align:center;'>46,143</td><td style='text-align:center;color:red;'>-9,130</td><td style='text-align:center;color:red;'>-16.5%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/31W5EY0aAly4Qieq6OFu6I.html' class='link'>A Boogie Wit da Hoodie</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

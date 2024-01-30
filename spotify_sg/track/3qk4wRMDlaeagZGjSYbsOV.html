@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02046527a9c176f7c2916f3530' alt='' height=500 width=500 /><h1>Sober</h1><h2><td style=font-size:20px;><a href=../artist/02kJSzxNuaWGqwubyUba0Z.html' class='link'>G-Eazy</a>, <a href='../artist/6VuMaDnrHyPL1p4EHjYLi7.html' class='link'>Charlie Puth</a></h2><h3>2017 | 3:23</h3><h3>9 Weeks On Chart | Peak: 41 (99,044 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2017_12_14.html' class='link'>2017/12/14</a></td><td style='text-align:center;'>122</td><td style='text-align:center;'>46,331</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_12_21.html' class='link'>2017/12/21</a></td><td style='text-align:center;'>55</td><td style='text-align:center;'>72,474</td><td style='text-align:center;color:#5FEC2F;'>+26,143</td><td style='text-align:center;color:#5FEC2F;'>+56.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_12_28.html' class='link'>2017/12/28</a></td><td style='text-align:center;'><b>41</b></td><td style='text-align:center;'>89,562</td><td style='text-align:center;color:#5FEC2F;'>+17,088</td><td style='text-align:center;color:#5FEC2F;'>+23.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_01_04.html' class='link'>2018/01/04</a></td><td style='text-align:center;'>42</td><td style='text-align:center;'>95,905</td><td style='text-align:center;color:#5FEC2F;'>+6,343</td><td style='text-align:center;color:#5FEC2F;'>+7.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_01_11.html' class='link'>2018/01/11</a></td><td style='text-align:center;'>51</td><td style='text-align:center;'><b>99,044</b></td><td style='text-align:center;color:#5FEC2F;'>+3,139</td><td style='text-align:center;color:#5FEC2F;'>+3.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_01_18.html' class='link'>2018/01/18</a></td><td style='text-align:center;'>62</td><td style='text-align:center;'>86,391</td><td style='text-align:center;color:red;'>-12,653</td><td style='text-align:center;color:red;'>-12.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_01_25.html' class='link'>2018/01/25</a></td><td style='text-align:center;'>73</td><td style='text-align:center;'>72,770</td><td style='text-align:center;color:red;'>-13,621</td><td style='text-align:center;color:red;'>-15.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_02_01.html' class='link'>2018/02/01</a></td><td style='text-align:center;'>113</td><td style='text-align:center;'>53,688</td><td style='text-align:center;color:red;'>-19,082</td><td style='text-align:center;color:red;'>-26.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_02_08.html' class='link'>2018/02/08</a></td><td style='text-align:center;'>143</td><td style='text-align:center;'>44,128</td><td style='text-align:center;color:red;'>-9,560</td><td style='text-align:center;color:red;'>-17.8%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/02kJSzxNuaWGqwubyUba0Z.html' class='link'>G-Eazy</a>, <a href='../artist/6VuMaDnrHyPL1p4EHjYLi7.html' class='link'>Charlie Puth</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02046527a9c176f7c2916f3530' alt='' height=500 width=500 /><h1>Sober</h1><h2><td style=font-size:20px;><a href=../artist/02kJSzxNuaWGqwubyUba0Z.html' class='link'>G-Eazy</a>, <a href='../artist/6VuMaDnrHyPL1p4EHjYLi7.html' class='link'>Charlie Puth</a></h2><h3>2017 | 3:23</h3><h3>9 Weeks On Chart | Peak: 41 (99,044 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2017/12/14', '2017/12/21', '2017/12/28', '2018/01/04', '2018/01/11', '2018/01/18', '2018/01/25', '2018/02/01', '2018/02/08']
+    const y_line = [122, 55, 41, 42, 51, 62, 73, 113, 143]
+    const y_bar = [46331, 72474, 89562, 95905, 99044, 86391, 72770, 53688, 44128]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 15,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 10000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2017_12_14.html' class='link'>2017/12/14</a></td><td style='text-align:center;'>122</td><td style='text-align:center;'>46,331</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_12_21.html' class='link'>2017/12/21</a></td><td style='text-align:center;'>55</td><td style='text-align:center;'>72,474</td><td style='text-align:center;color:#5FEC2F;'>+26,143</td><td style='text-align:center;color:#5FEC2F;'>+56.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_12_28.html' class='link'>2017/12/28</a></td><td style='text-align:center;'><b>41</b></td><td style='text-align:center;'>89,562</td><td style='text-align:center;color:#5FEC2F;'>+17,088</td><td style='text-align:center;color:#5FEC2F;'>+23.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_01_04.html' class='link'>2018/01/04</a></td><td style='text-align:center;'>42</td><td style='text-align:center;'>95,905</td><td style='text-align:center;color:#5FEC2F;'>+6,343</td><td style='text-align:center;color:#5FEC2F;'>+7.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_01_11.html' class='link'>2018/01/11</a></td><td style='text-align:center;'>51</td><td style='text-align:center;'><b>99,044</b></td><td style='text-align:center;color:#5FEC2F;'>+3,139</td><td style='text-align:center;color:#5FEC2F;'>+3.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_01_18.html' class='link'>2018/01/18</a></td><td style='text-align:center;'>62</td><td style='text-align:center;'>86,391</td><td style='text-align:center;color:red;'>-12,653</td><td style='text-align:center;color:red;'>-12.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_01_25.html' class='link'>2018/01/25</a></td><td style='text-align:center;'>73</td><td style='text-align:center;'>72,770</td><td style='text-align:center;color:red;'>-13,621</td><td style='text-align:center;color:red;'>-15.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_02_01.html' class='link'>2018/02/01</a></td><td style='text-align:center;'>113</td><td style='text-align:center;'>53,688</td><td style='text-align:center;color:red;'>-19,082</td><td style='text-align:center;color:red;'>-26.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2018_02_08.html' class='link'>2018/02/08</a></td><td style='text-align:center;'>143</td><td style='text-align:center;'>44,128</td><td style='text-align:center;color:red;'>-9,560</td><td style='text-align:center;color:red;'>-17.8%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/02kJSzxNuaWGqwubyUba0Z.html' class='link'>G-Eazy</a>, <a href='../artist/6VuMaDnrHyPL1p4EHjYLi7.html' class='link'>Charlie Puth</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

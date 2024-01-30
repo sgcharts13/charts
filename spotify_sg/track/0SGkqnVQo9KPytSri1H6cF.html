@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02e572359074e5da958a922987' alt='' height=500 width=500 /><h1>Bounce Back</h1><h2><td style=font-size:20px;><a href='../artist/0c173mlxpT3dSFRgMO8XPh.html' class='link'>Big Sean</a></h2><h3>2017 | 3:42</h3><h3>10 Weeks On Chart | Peak: 104 (42,473 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2017_01_19.html' class='link'>2017/01/19</a></td><td style='text-align:center;'>150</td><td style='text-align:center;'>28,549</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_01_26.html' class='link'>2017/01/26</a></td><td style='text-align:center;'>142</td><td style='text-align:center;'>30,644</td><td style='text-align:center;color:#5FEC2F;'>+2,095</td><td style='text-align:center;color:#5FEC2F;'>+7.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_02_02.html' class='link'>2017/02/02</a></td><td style='text-align:center;'>133</td><td style='text-align:center;'>28,967</td><td style='text-align:center;color:red;'>-1,677</td><td style='text-align:center;color:red;'>-5.5%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_02_09.html' class='link'>2017/02/09</a></td><td style='text-align:center;'><b>104</b></td><td style='text-align:center;'>42,223</td><td style='text-align:center;color:#5FEC2F;'>+13,256</td><td style='text-align:center;color:#5FEC2F;'>+45.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_02_16.html' class='link'>2017/02/16</a></td><td style='text-align:center;'>109</td><td style='text-align:center;'><b>42,473</b></td><td style='text-align:center;color:#5FEC2F;'>+250</td><td style='text-align:center;color:#5FEC2F;'>+0.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_02_23.html' class='link'>2017/02/23</a></td><td style='text-align:center;'>109</td><td style='text-align:center;'>41,536</td><td style='text-align:center;color:red;'>-937</td><td style='text-align:center;color:red;'>-2.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_03_02.html' class='link'>2017/03/02</a></td><td style='text-align:center;'>113</td><td style='text-align:center;'>40,681</td><td style='text-align:center;color:red;'>-855</td><td style='text-align:center;color:red;'>-2.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_03_09.html' class='link'>2017/03/09</a></td><td style='text-align:center;'>123</td><td style='text-align:center;'>37,822</td><td style='text-align:center;color:red;'>-2,859</td><td style='text-align:center;color:red;'>-7.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_03_16.html' class='link'>2017/03/16</a></td><td style='text-align:center;'>120</td><td style='text-align:center;'>39,190</td><td style='text-align:center;color:#5FEC2F;'>+1,368</td><td style='text-align:center;color:#5FEC2F;'>+3.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_03_23.html' class='link'>2017/03/23</a></td><td style='text-align:center;'>152</td><td style='text-align:center;'>30,929</td><td style='text-align:center;color:red;'>-8,261</td><td style='text-align:center;color:red;'>-21.1%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/0c173mlxpT3dSFRgMO8XPh.html' class='link'>Big Sean</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02e572359074e5da958a922987' alt='' height=500 width=500 /><h1>Bounce Back</h1><h2><td style=font-size:20px;><a href='../artist/0c173mlxpT3dSFRgMO8XPh.html' class='link'>Big Sean</a></h2><h3>2017 | 3:42</h3><h3>10 Weeks On Chart | Peak: 104 (42,473 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2017/01/19', '2017/01/26', '2017/02/02', '2017/02/09', '2017/02/16', '2017/02/23', '2017/03/02', '2017/03/09', '2017/03/16', '2017/03/23']
+    const y_line = [150, 142, 133, 104, 109, 109, 113, 123, 120, 152]
+    const y_bar = [28549, 30644, 28967, 42223, 42473, 41536, 40681, 37822, 39190, 30929]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 20,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 5000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2017_01_19.html' class='link'>2017/01/19</a></td><td style='text-align:center;'>150</td><td style='text-align:center;'>28,549</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_01_26.html' class='link'>2017/01/26</a></td><td style='text-align:center;'>142</td><td style='text-align:center;'>30,644</td><td style='text-align:center;color:#5FEC2F;'>+2,095</td><td style='text-align:center;color:#5FEC2F;'>+7.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_02_02.html' class='link'>2017/02/02</a></td><td style='text-align:center;'>133</td><td style='text-align:center;'>28,967</td><td style='text-align:center;color:red;'>-1,677</td><td style='text-align:center;color:red;'>-5.5%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_02_09.html' class='link'>2017/02/09</a></td><td style='text-align:center;'><b>104</b></td><td style='text-align:center;'>42,223</td><td style='text-align:center;color:#5FEC2F;'>+13,256</td><td style='text-align:center;color:#5FEC2F;'>+45.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_02_16.html' class='link'>2017/02/16</a></td><td style='text-align:center;'>109</td><td style='text-align:center;'><b>42,473</b></td><td style='text-align:center;color:#5FEC2F;'>+250</td><td style='text-align:center;color:#5FEC2F;'>+0.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_02_23.html' class='link'>2017/02/23</a></td><td style='text-align:center;'>109</td><td style='text-align:center;'>41,536</td><td style='text-align:center;color:red;'>-937</td><td style='text-align:center;color:red;'>-2.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_03_02.html' class='link'>2017/03/02</a></td><td style='text-align:center;'>113</td><td style='text-align:center;'>40,681</td><td style='text-align:center;color:red;'>-855</td><td style='text-align:center;color:red;'>-2.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_03_09.html' class='link'>2017/03/09</a></td><td style='text-align:center;'>123</td><td style='text-align:center;'>37,822</td><td style='text-align:center;color:red;'>-2,859</td><td style='text-align:center;color:red;'>-7.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_03_16.html' class='link'>2017/03/16</a></td><td style='text-align:center;'>120</td><td style='text-align:center;'>39,190</td><td style='text-align:center;color:#5FEC2F;'>+1,368</td><td style='text-align:center;color:#5FEC2F;'>+3.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_03_23.html' class='link'>2017/03/23</a></td><td style='text-align:center;'>152</td><td style='text-align:center;'>30,929</td><td style='text-align:center;color:red;'>-8,261</td><td style='text-align:center;color:red;'>-21.1%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/0c173mlxpT3dSFRgMO8XPh.html' class='link'>Big Sean</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

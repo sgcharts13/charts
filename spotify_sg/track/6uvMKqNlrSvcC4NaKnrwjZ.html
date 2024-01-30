@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02b8ea4b876287cbbb519ac0fc' alt='' height=500 width=500 /><h1>Body (Remix)</h1><h2><td style=font-size:20px;><a href=../artist/7b79bQFziJFedJb75k6hFt.html' class='link'>Tion Wayne</a>, <a href='../artist/3FoFW2AoUGRHBacC6i4x4p.html' class='link'>Russ Millions</a>, <a href='../artist/7m0BsF0t3K9WQFgKoPejfk.html' class='link'>ArrDee</a>, <a href='../artist/63ebc5zUpJ36aoTDQJHa9B.html' class='link'>E1 (3x3)</a>, <a href='../artist/2uIRmVaCVpHQjaVgph5clS.html' class='link'>ZT (3x3)</a>, <a href='../artist/4Dokdwa3WB7ilQ2c2qvIBL.html' class='link'>Bugzy Malone</a>, <a href='../artist/5AiY4bxeXerLXx03JADdQv.html' class='link'>Buni</a>, <a href='../artist/14CHVeJGrR5xgUGQFV5BVM.html' class='link'>Fivio Foreign</a>, <a href='../artist/4QSTyDpxsKmv3UfavVUImR.html' class='link'>Darkoo</a></h2><h3>2021 | 4:38</h3><h3>6 Weeks On Chart | Peak: 24 (112,867 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2021_05_13.html' class='link'>2021/05/13</a></td><td style='text-align:center;'>26</td><td style='text-align:center;'>110,845</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2021_05_20.html' class='link'>2021/05/20</a></td><td style='text-align:center;'><b>24</b></td><td style='text-align:center;'><b>112,867</b></td><td style='text-align:center;color:#5FEC2F;'>+2,022</td><td style='text-align:center;color:#5FEC2F;'>+1.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_05_27.html' class='link'>2021/05/27</a></td><td style='text-align:center;'>38</td><td style='text-align:center;'>97,052</td><td style='text-align:center;color:red;'>-15,815</td><td style='text-align:center;color:red;'>-14.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_06_03.html' class='link'>2021/06/03</a></td><td style='text-align:center;'>51</td><td style='text-align:center;'>77,444</td><td style='text-align:center;color:red;'>-19,608</td><td style='text-align:center;color:red;'>-20.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_06_10.html' class='link'>2021/06/10</a></td><td style='text-align:center;'>108</td><td style='text-align:center;'>52,493</td><td style='text-align:center;color:red;'>-24,951</td><td style='text-align:center;color:red;'>-32.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_06_17.html' class='link'>2021/06/17</a></td><td style='text-align:center;'>159</td><td style='text-align:center;'>43,953</td><td style='text-align:center;color:red;'>-8,540</td><td style='text-align:center;color:red;'>-16.3%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/7b79bQFziJFedJb75k6hFt.html' class='link'>Tion Wayne</a>, <a href='../artist/3FoFW2AoUGRHBacC6i4x4p.html' class='link'>Darkoo</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02b8ea4b876287cbbb519ac0fc' alt='' height=500 width=500 /><h1>Body (Remix)</h1><h2><td style=font-size:20px;><a href=../artist/7b79bQFziJFedJb75k6hFt.html' class='link'>Tion Wayne</a>, <a href='../artist/3FoFW2AoUGRHBacC6i4x4p.html' class='link'>Russ Millions</a>, <a href='../artist/7m0BsF0t3K9WQFgKoPejfk.html' class='link'>ArrDee</a>, <a href='../artist/63ebc5zUpJ36aoTDQJHa9B.html' class='link'>E1 (3x3)</a>, <a href='../artist/2uIRmVaCVpHQjaVgph5clS.html' class='link'>ZT (3x3)</a>, <a href='../artist/4Dokdwa3WB7ilQ2c2qvIBL.html' class='link'>Bugzy Malone</a>, <a href='../artist/5AiY4bxeXerLXx03JADdQv.html' class='link'>Buni</a>, <a href='../artist/14CHVeJGrR5xgUGQFV5BVM.html' class='link'>Fivio Foreign</a>, <a href='../artist/4QSTyDpxsKmv3UfavVUImR.html' class='link'>Darkoo</a></h2><h3>2021 | 4:38</h3><h3>6 Weeks On Chart | Peak: 24 (112,867 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2021/05/13', '2021/05/20', '2021/05/27', '2021/06/03', '2021/06/10', '2021/06/17']
+    const y_line = [26, 24, 38, 51, 108, 159]
+    const y_bar = [110845, 112867, 97052, 77444, 52493, 43953]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 20,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 12000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2021_05_13.html' class='link'>2021/05/13</a></td><td style='text-align:center;'>26</td><td style='text-align:center;'>110,845</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2021_05_20.html' class='link'>2021/05/20</a></td><td style='text-align:center;'><b>24</b></td><td style='text-align:center;'><b>112,867</b></td><td style='text-align:center;color:#5FEC2F;'>+2,022</td><td style='text-align:center;color:#5FEC2F;'>+1.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_05_27.html' class='link'>2021/05/27</a></td><td style='text-align:center;'>38</td><td style='text-align:center;'>97,052</td><td style='text-align:center;color:red;'>-15,815</td><td style='text-align:center;color:red;'>-14.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_06_03.html' class='link'>2021/06/03</a></td><td style='text-align:center;'>51</td><td style='text-align:center;'>77,444</td><td style='text-align:center;color:red;'>-19,608</td><td style='text-align:center;color:red;'>-20.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_06_10.html' class='link'>2021/06/10</a></td><td style='text-align:center;'>108</td><td style='text-align:center;'>52,493</td><td style='text-align:center;color:red;'>-24,951</td><td style='text-align:center;color:red;'>-32.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_06_17.html' class='link'>2021/06/17</a></td><td style='text-align:center;'>159</td><td style='text-align:center;'>43,953</td><td style='text-align:center;color:red;'>-8,540</td><td style='text-align:center;color:red;'>-16.3%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/7b79bQFziJFedJb75k6hFt.html' class='link'>Tion Wayne</a>, <a href='../artist/3FoFW2AoUGRHBacC6i4x4p.html' class='link'>Darkoo</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

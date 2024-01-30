@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e0219fc30a2e29973763e3d8a53' alt='' height=500 width=500 /><h1>Lost Cause</h1><h2><td style=font-size:20px;><a href='../artist/6qqNVTkY8uBg9cP3Jd7DAH.html' class='link'>Billie Eilish</a></h2><h3>2021 | 3:32</h3><h3>7 Weeks On Chart | Peak: 16 (137,460 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2021_06_10.html' class='link'>2021/06/10</a></td><td style='text-align:center;'><b>16</b></td><td style='text-align:center;'><b>137,460</b></td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2021_06_17.html' class='link'>2021/06/17</a></td><td style='text-align:center;'>31</td><td style='text-align:center;'>95,154</td><td style='text-align:center;color:red;'>-42,306</td><td style='text-align:center;color:red;'>-30.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_06_24.html' class='link'>2021/06/24</a></td><td style='text-align:center;'>55</td><td style='text-align:center;'>70,553</td><td style='text-align:center;color:red;'>-24,601</td><td style='text-align:center;color:red;'>-25.9%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_07_01.html' class='link'>2021/07/01</a></td><td style='text-align:center;'>89</td><td style='text-align:center;'>59,791</td><td style='text-align:center;color:red;'>-10,762</td><td style='text-align:center;color:red;'>-15.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_07_08.html' class='link'>2021/07/08</a></td><td style='text-align:center;'>106</td><td style='text-align:center;'>53,097</td><td style='text-align:center;color:red;'>-6,694</td><td style='text-align:center;color:red;'>-11.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_07_15.html' class='link'>2021/07/15</a></td><td style='text-align:center;'>154</td><td style='text-align:center;'>45,582</td><td style='text-align:center;color:red;'>-7,515</td><td style='text-align:center;color:red;'>-14.2%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr><tr><td style='text-align:center;'><a href='../query/2021_08_05.html' class='link'>2021/08/05</a></td><td style='text-align:center;'>145</td><td style='text-align:center;'>46,028</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/6qqNVTkY8uBg9cP3Jd7DAH.html' class='link'>Billie Eilish</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e0219fc30a2e29973763e3d8a53' alt='' height=500 width=500 /><h1>Lost Cause</h1><h2><td style=font-size:20px;><a href='../artist/6qqNVTkY8uBg9cP3Jd7DAH.html' class='link'>Billie Eilish</a></h2><h3>2021 | 3:32</h3><h3>7 Weeks On Chart | Peak: 16 (137,460 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2021/06/10', '2021/06/17', '2021/06/24', '2021/07/01', '2021/07/08', '2021/07/15', '2021/07/22', '2021/08/05']
+    const y_line = [16, 31, 55, 89, 106, 154, 'NaN', 145]
+    const y_bar = [137460, 95154, 70553, 59791, 53097, 45582, 'NaN', 46028]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 20,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 14000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2021_06_10.html' class='link'>2021/06/10</a></td><td style='text-align:center;'><b>16</b></td><td style='text-align:center;'><b>137,460</b></td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2021_06_17.html' class='link'>2021/06/17</a></td><td style='text-align:center;'>31</td><td style='text-align:center;'>95,154</td><td style='text-align:center;color:red;'>-42,306</td><td style='text-align:center;color:red;'>-30.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_06_24.html' class='link'>2021/06/24</a></td><td style='text-align:center;'>55</td><td style='text-align:center;'>70,553</td><td style='text-align:center;color:red;'>-24,601</td><td style='text-align:center;color:red;'>-25.9%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_07_01.html' class='link'>2021/07/01</a></td><td style='text-align:center;'>89</td><td style='text-align:center;'>59,791</td><td style='text-align:center;color:red;'>-10,762</td><td style='text-align:center;color:red;'>-15.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_07_08.html' class='link'>2021/07/08</a></td><td style='text-align:center;'>106</td><td style='text-align:center;'>53,097</td><td style='text-align:center;color:red;'>-6,694</td><td style='text-align:center;color:red;'>-11.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_07_15.html' class='link'>2021/07/15</a></td><td style='text-align:center;'>154</td><td style='text-align:center;'>45,582</td><td style='text-align:center;color:red;'>-7,515</td><td style='text-align:center;color:red;'>-14.2%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr><tr><td style='text-align:center;'><a href='../query/2021_08_05.html' class='link'>2021/08/05</a></td><td style='text-align:center;'>145</td><td style='text-align:center;'>46,028</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/6qqNVTkY8uBg9cP3Jd7DAH.html' class='link'>Billie Eilish</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

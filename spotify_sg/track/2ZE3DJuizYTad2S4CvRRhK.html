@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02184766c511de1c5c093c556a' alt='' height=500 width=500 /><h1>Easy Love</h1><h2><td style=font-size:20px;><a href='../artist/5JZ7CnR6gTvEMKX4g70Amv.html' class='link'>Lauv</a></h2><h3>2017 | 3:44</h3><h3>8 Weeks On Chart | Peak: 55 (75,460 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2017_10_12.html' class='link'>2017/10/12</a></td><td style='text-align:center;'>70</td><td style='text-align:center;'>66,896</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_10_19.html' class='link'>2017/10/19</a></td><td style='text-align:center;'><b>55</b></td><td style='text-align:center;'><b>75,460</b></td><td style='text-align:center;color:#5FEC2F;'>+8,564</td><td style='text-align:center;color:#5FEC2F;'>+12.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_10_26.html' class='link'>2017/10/26</a></td><td style='text-align:center;'>65</td><td style='text-align:center;'>68,594</td><td style='text-align:center;color:red;'>-6,866</td><td style='text-align:center;color:red;'>-9.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_11_02.html' class='link'>2017/11/02</a></td><td style='text-align:center;'>67</td><td style='text-align:center;'>67,747</td><td style='text-align:center;color:red;'>-847</td><td style='text-align:center;color:red;'>-1.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_11_09.html' class='link'>2017/11/09</a></td><td style='text-align:center;'>72</td><td style='text-align:center;'>67,890</td><td style='text-align:center;color:#5FEC2F;'>+143</td><td style='text-align:center;color:#5FEC2F;'>+0.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_11_16.html' class='link'>2017/11/16</a></td><td style='text-align:center;'>69</td><td style='text-align:center;'>69,311</td><td style='text-align:center;color:#5FEC2F;'>+1,421</td><td style='text-align:center;color:#5FEC2F;'>+2.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_11_23.html' class='link'>2017/11/23</a></td><td style='text-align:center;'>76</td><td style='text-align:center;'>62,842</td><td style='text-align:center;color:red;'>-6,469</td><td style='text-align:center;color:red;'>-9.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_11_30.html' class='link'>2017/11/30</a></td><td style='text-align:center;'>134</td><td style='text-align:center;'>42,860</td><td style='text-align:center;color:red;'>-19,982</td><td style='text-align:center;color:red;'>-31.8%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/5JZ7CnR6gTvEMKX4g70Amv.html' class='link'>Lauv</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02184766c511de1c5c093c556a' alt='' height=500 width=500 /><h1>Easy Love</h1><h2><td style=font-size:20px;><a href='../artist/5JZ7CnR6gTvEMKX4g70Amv.html' class='link'>Lauv</a></h2><h3>2017 | 3:44</h3><h3>8 Weeks On Chart | Peak: 55 (75,460 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2017/10/12', '2017/10/19', '2017/10/26', '2017/11/02', '2017/11/09', '2017/11/16', '2017/11/23', '2017/11/30']
+    const y_line = [70, 55, 65, 67, 72, 69, 76, 134]
+    const y_bar = [66896, 75460, 68594, 67747, 67890, 69311, 62842, 42860]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 15,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 8000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2017_10_12.html' class='link'>2017/10/12</a></td><td style='text-align:center;'>70</td><td style='text-align:center;'>66,896</td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2017_10_19.html' class='link'>2017/10/19</a></td><td style='text-align:center;'><b>55</b></td><td style='text-align:center;'><b>75,460</b></td><td style='text-align:center;color:#5FEC2F;'>+8,564</td><td style='text-align:center;color:#5FEC2F;'>+12.8%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_10_26.html' class='link'>2017/10/26</a></td><td style='text-align:center;'>65</td><td style='text-align:center;'>68,594</td><td style='text-align:center;color:red;'>-6,866</td><td style='text-align:center;color:red;'>-9.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_11_02.html' class='link'>2017/11/02</a></td><td style='text-align:center;'>67</td><td style='text-align:center;'>67,747</td><td style='text-align:center;color:red;'>-847</td><td style='text-align:center;color:red;'>-1.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_11_09.html' class='link'>2017/11/09</a></td><td style='text-align:center;'>72</td><td style='text-align:center;'>67,890</td><td style='text-align:center;color:#5FEC2F;'>+143</td><td style='text-align:center;color:#5FEC2F;'>+0.2%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_11_16.html' class='link'>2017/11/16</a></td><td style='text-align:center;'>69</td><td style='text-align:center;'>69,311</td><td style='text-align:center;color:#5FEC2F;'>+1,421</td><td style='text-align:center;color:#5FEC2F;'>+2.1%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_11_23.html' class='link'>2017/11/23</a></td><td style='text-align:center;'>76</td><td style='text-align:center;'>62,842</td><td style='text-align:center;color:red;'>-6,469</td><td style='text-align:center;color:red;'>-9.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2017_11_30.html' class='link'>2017/11/30</a></td><td style='text-align:center;'>134</td><td style='text-align:center;'>42,860</td><td style='text-align:center;color:red;'>-19,982</td><td style='text-align:center;color:red;'>-31.8%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/5JZ7CnR6gTvEMKX4g70Amv.html' class='link'>Lauv</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

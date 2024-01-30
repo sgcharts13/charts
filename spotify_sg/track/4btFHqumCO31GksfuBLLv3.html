@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <link rel="stylesheet" href="../../assets/css/main.css" />
             <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
@@ -45,7 +46,109 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02ef24c3fdbf856340d55cfeb2' alt='' height=500 width=500 /><h1>Overpass Graffiti</h1><h2><td style=font-size:20px;><a href='../artist/6eUKZXaKkcviH0Ku9w2n3V.html' class='link'>Ed Sheeran</a></h2><h3>2021 | 3:56</h3><h3>10 Weeks On Chart | Peak: 12 (150,288 streams)</h3><table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2021_11_04.html' class='link'>2021/11/04</a></td><td style='text-align:center;'><b>12</b></td><td style='text-align:center;'><b>150,288</b></td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2021_11_11.html' class='link'>2021/11/11</a></td><td style='text-align:center;'>25</td><td style='text-align:center;'>124,350</td><td style='text-align:center;color:red;'>-25,938</td><td style='text-align:center;color:red;'>-17.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_11_18.html' class='link'>2021/11/18</a></td><td style='text-align:center;'>61</td><td style='text-align:center;'>91,691</td><td style='text-align:center;color:red;'>-32,659</td><td style='text-align:center;color:red;'>-26.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_11_25.html' class='link'>2021/11/25</a></td><td style='text-align:center;'>62</td><td style='text-align:center;'>78,462</td><td style='text-align:center;color:red;'>-13,229</td><td style='text-align:center;color:red;'>-14.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_12_02.html' class='link'>2021/12/02</a></td><td style='text-align:center;'>70</td><td style='text-align:center;'>73,743</td><td style='text-align:center;color:red;'>-4,719</td><td style='text-align:center;color:red;'>-6.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_12_09.html' class='link'>2021/12/09</a></td><td style='text-align:center;'>93</td><td style='text-align:center;'>63,928</td><td style='text-align:center;color:red;'>-9,815</td><td style='text-align:center;color:red;'>-13.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_12_16.html' class='link'>2021/12/16</a></td><td style='text-align:center;'>129</td><td style='text-align:center;'>50,340</td><td style='text-align:center;color:red;'>-13,588</td><td style='text-align:center;color:red;'>-21.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_12_23.html' class='link'>2021/12/23</a></td><td style='text-align:center;'>143</td><td style='text-align:center;'>47,142</td><td style='text-align:center;color:red;'>-3,198</td><td style='text-align:center;color:red;'>-6.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_12_30.html' class='link'>2021/12/30</a></td><td style='text-align:center;'>173</td><td style='text-align:center;'>44,152</td><td style='text-align:center;color:red;'>-2,990</td><td style='text-align:center;color:red;'>-6.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2022_01_06.html' class='link'>2022/01/06</a></td><td style='text-align:center;'>170</td><td style='text-align:center;'>40,035</td><td style='text-align:center;color:red;'>-4,117</td><td style='text-align:center;color:red;'>-9.3%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/6eUKZXaKkcviH0Ku9w2n3V.html' class='link'>Ed Sheeran</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02ef24c3fdbf856340d55cfeb2' alt='' height=500 width=500 /><h1>Overpass Graffiti</h1><h2><td style=font-size:20px;><a href='../artist/6eUKZXaKkcviH0Ku9w2n3V.html' class='link'>Ed Sheeran</a></h2><h3>2021 | 3:56</h3><h3>10 Weeks On Chart | Peak: 12 (150,288 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2021/11/04', '2021/11/11', '2021/11/18', '2021/11/25', '2021/12/02', '2021/12/09', '2021/12/16', '2021/12/23', '2021/12/30', '2022/01/06']
+    const y_line = [12, 25, 61, 62, 70, 93, 129, 143, 173, 170]
+    const y_bar = [150288, 124350, 91691, 78462, 73743, 63928, 50340, 47142, 44152, 40035]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 20,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 16000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2021_11_04.html' class='link'>2021/11/04</a></td><td style='text-align:center;'><b>12</b></td><td style='text-align:center;'><b>150,288</b></td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2021_11_11.html' class='link'>2021/11/11</a></td><td style='text-align:center;'>25</td><td style='text-align:center;'>124,350</td><td style='text-align:center;color:red;'>-25,938</td><td style='text-align:center;color:red;'>-17.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_11_18.html' class='link'>2021/11/18</a></td><td style='text-align:center;'>61</td><td style='text-align:center;'>91,691</td><td style='text-align:center;color:red;'>-32,659</td><td style='text-align:center;color:red;'>-26.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_11_25.html' class='link'>2021/11/25</a></td><td style='text-align:center;'>62</td><td style='text-align:center;'>78,462</td><td style='text-align:center;color:red;'>-13,229</td><td style='text-align:center;color:red;'>-14.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_12_02.html' class='link'>2021/12/02</a></td><td style='text-align:center;'>70</td><td style='text-align:center;'>73,743</td><td style='text-align:center;color:red;'>-4,719</td><td style='text-align:center;color:red;'>-6.0%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_12_09.html' class='link'>2021/12/09</a></td><td style='text-align:center;'>93</td><td style='text-align:center;'>63,928</td><td style='text-align:center;color:red;'>-9,815</td><td style='text-align:center;color:red;'>-13.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_12_16.html' class='link'>2021/12/16</a></td><td style='text-align:center;'>129</td><td style='text-align:center;'>50,340</td><td style='text-align:center;color:red;'>-13,588</td><td style='text-align:center;color:red;'>-21.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_12_23.html' class='link'>2021/12/23</a></td><td style='text-align:center;'>143</td><td style='text-align:center;'>47,142</td><td style='text-align:center;color:red;'>-3,198</td><td style='text-align:center;color:red;'>-6.4%</td></tr><tr><td style='text-align:center;'><a href='../query/2021_12_30.html' class='link'>2021/12/30</a></td><td style='text-align:center;'>173</td><td style='text-align:center;'>44,152</td><td style='text-align:center;color:red;'>-2,990</td><td style='text-align:center;color:red;'>-6.3%</td></tr><tr><td style='text-align:center;'><a href='../query/2022_01_06.html' class='link'>2022/01/06</a></td><td style='text-align:center;'>170</td><td style='text-align:center;'>40,035</td><td style='text-align:center;color:red;'>-4,117</td><td style='text-align:center;color:red;'>-9.3%</td></tr><tr><td>--------------</td><td>---</td><td>--------</td><td>------</td><td>--------</td></tr></table><h3><td>See all tracks from <a href='../artist/6eUKZXaKkcviH0Ku9w2n3V.html' class='link'>Ed Sheeran</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
                     <!-- Contact -->
                         <section id="contact">
                             <div class="inner">

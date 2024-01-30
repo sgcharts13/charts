@@ -46,13 +46,13 @@
                         </nav>
 
                     <!-- Main -->
-                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e026d656425840da4afbcf51bab' alt='' height=500 width=500 /><h1>Harlem Shake</h1><h2><td style=font-size:20px;><a href='../artist/25fqWEebq6PoiGQIHIrdtv.html' class='link'>Baauer</a></h2><h3>2012 | 3:16</h3><h3>2 Weeks On Chart | Peak: 35 (3,257 streams)</h3><div class="interact" style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; background: url('https://i.scdn.co/image/ab67616d00001e026d656425840da4afbcf51bab') no-repeat center center fixed; background-size: cover;">
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e026d656425840da4afbcf51bab' alt='' height=500 width=500 /><h1>Harlem Shake</h1><h2><td style=font-size:20px;><a href='../artist/25fqWEebq6PoiGQIHIrdtv.html' class='link'>Baauer</a></h2><h3>2012 | 3:16</h3><h3>2 Weeks On Chart | Peak: 35 (3,257 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
     <canvas id="myChart" width="800" height="400" style="display: block;">
 
   <script>
-    const x = ['2013/04/28', '2013/05/05', '2013/05/12']
-    const y_line = [35, 50, 'NaN']
-    const y_bar = [3257, 2508, 'NaN']
+    const x = ['2013/04/28', '2013/05/05']
+    const y_line = [35, 50]
+    const y_bar = [3257, 2508]
 
     // Set up the line and bar graph on the same canvas
     const ctx = document.getElementById('myChart').getContext('2d');
@@ -81,12 +81,26 @@
         ]
       },
       options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
         scales: {
           x: {
             reverse: false,
             ticks: {
-              color: 'yellow' // Customize x-axis label color
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
             },
+            grid: {
+              display: false,
+            }
           },
           y1: {
               type: 'linear',
@@ -94,6 +108,14 @@
               position: 'left',
               id: 'y-axis-line',
               reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 5,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
           },
           y2: {
               type: 'linear',
@@ -101,7 +123,11 @@
               position: 'right',
               id: 'y-axis-bar',
               grid: {
-                drawOnChartArea: false, // only want the grid lines for one axis to show up
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 1000,
               },
           },
         },
@@ -110,9 +136,14 @@
             display: true,
             position: 'top',
           },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
         },
-        interaction: {
+        hover: {
           mode: 'index',
+          intersec: false
         },
       },
     });
