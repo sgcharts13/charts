@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+    <!--
+        Forty by HTML5 UP
+        html5up.net | @ajlkn
+        Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    -->
+    <html>
+        <head>
+            <titleTraining Seasonon Spotify Singapore - sgcharts13</title>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+            <link rel="stylesheet" href="../../assets/css/main.css" />
+            <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ72PWRCWX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-PQ72PWRCWX');
+        </script>
+        <body class="is-preload">
+
+            <!-- Wrapper -->
+                <div id="wrapper">
+
+                    <!-- Header -->
+                        <header id="header">
+                            <a href="../../main.html" class="logo"><strong>sgcharts13</strong></a>
+                            <nav>
+                                <a href="#menu">Menu</a>
+                            </nav>
+                        </header>
+
+                    <!-- Menu -->
+                        <nav id="menu">
+                            <ul class="links">
+                                <li><a href="../../main.html">Home</a></li>
+                                <li><a href="../../spotify_sg/songbase_search.html">Spotify Charts</a></li>
+                                <li><a href="../../movie_sg/main.html">Movie Charts</a></li>
+                                <li><a href="../../trains/main.html">Train Ridership</a></li>
+                            </ul>
+                        </nav>
+
+                    <!-- Main -->
+                        <div id="main" class="alt"><a id='top'></a><center><img src='https://i.scdn.co/image/ab67616d00001e02790260cc86fd7b2678bb204d' alt='' height=500 width=500 /><h1>Training Season</h1><h2><td style=font-size:20px;><a href='../artist/6M2wZ9GZgrQXHCFfjv46we.html' class='link'>Dua Lipa</a></h2><h3>2024 | 3:29</h3><h3>3 Weeks On Chart | Peak: 40 (118,711 streams)</h3><div class="interact" style="margin: 100; padding: 100;">
+    <canvas id="myChart" width="800" height="400" style="display: block;">
+
+  <script>
+    const x = ['2024/02/22', '2024/02/29', '2024/03/07']
+    const y_line = [40, 71, 116]
+    const y_bar = [118711, 97786, 81690]
+
+    // Set up the line and bar graph on the same canvas
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const mixedChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: x,
+        datasets: [
+          {
+            label: 'Position',
+            data: y_line,
+            type: 'line',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            fill: false,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Streams',
+            data: y_bar,
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            yAxisID: 'y2',
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        legend: {
+          labels: {
+            fontColor: "blue",
+            fontSize: 18
+            },
+        },
+        scales: {
+          x: {
+            reverse: false,
+            ticks: {
+              callback: function(val, index) {
+                // Hide every 2nd tick label
+                return index % 4 === 0 ? this.getLabelForValue(val) : '';
+              },
+              color: 'yellow', // Customize x-axis label color
+            },
+            grid: {
+              display: false,
+            }
+          },
+          y1: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-line',
+              reverse: true,
+              ticks: {
+                color: 'rgba(255, 99, 132, 1)',
+                min: 1,
+                stepSize: 15,
+              },
+              grid: {
+                color: 'rgba(255, 99, 132, 0.2)',
+              },
+          },
+          y2: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-bar',
+              grid: {
+                color: 'rgba(75, 192, 192, 0.2)',
+              },
+              ticks: {
+                color: 'rgba(75, 192, 192, 1)',
+                stepSize: 12000,
+              },
+          },
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+      },
+    });
+  </script></canvas></div><br><br>
+    <table class='track_table'><tr><th style='text-align:center;'>Week</th><th style='text-align:center;'>Pos</th><th style='text-align:center;'>Streams</th><th style='text-align:center;'>Streams+</th><th style='text-align:center;'>Streams+%</th><tr><td style='text-align:center;'><a href='../query/2024_02_22.html' class='link'>2024/02/22</a></td><td style='text-align:center;'><b>40</b></td><td style='text-align:center;'><b>118,711</b></td><td style='text-align:center;'></td><td style='text-align:center;'></td></tr><tr><td style='text-align:center;'><a href='../query/2024_02_29.html' class='link'>2024/02/29</a></td><td style='text-align:center;'>71</td><td style='text-align:center;'>97,786</td><td style='text-align:center;color:red;'>-20,925</td><td style='text-align:center;color:red;'>-17.6%</td></tr><tr><td style='text-align:center;'><a href='../query/2024_03_07.html' class='link'>2024/03/07</a></td><td style='text-align:center;'>116</td><td style='text-align:center;'>81,690</td><td style='text-align:center;color:red;'>-16,096</td><td style='text-align:center;color:red;'>-16.5%</td></tr></table><h3><td>See all tracks from <a href='../artist/6M2wZ9GZgrQXHCFfjv46we.html' class='link'>Dua Lipa</a></h3></center><center><p><a href='#top'>Back to top</a></p></center></div>
+                    <!-- Contact -->
+                        <section id="contact">
+                            <div class="inner">
+                                <section>
+                                    <form method="post" action="#">
+                                        <div class="fields">
+                                            <div class="field half">
+                                                <label for="name">Name</label>
+                                                <input type="text" name="name" id="name" />
+                                            </div>
+                                            <div class="field half">
+                                                <label for="email">Email</label>
+                                                <input type="text" name="email" id="email" />
+                                            </div>
+                                            <div class="field">
+                                                <label for="message">Message</label>
+                                                <textarea name="message" id="message" rows="6"></textarea>
+                                            </div>
+                                        </div>
+                                        <ul class="actions">
+                                            <li><input type="submit" value="Currently Down :(" class="primary" /></li>
+                                            <li><input type="reset" value="Please Drop an Email!" /></li>
+                                        </ul>
+                                    </form>
+                                </section>
+                                <section class="split">
+                                    <section>
+                                        <div class="contact-method">
+                                            <span class="icon solid alt fa-envelope"></span>
+                                            <h3>Email Address</h3>
+                                            <span>For matters related to this site, please contact <a href="mailto:sgcharts13@gmail.com">sgcharts13@gmail.com</a></span><br><br>
+                                            <span>For matters related to my portfolio or personal matters, please contact <a href="mailto:darrentjw15@gmail.com">darrentjw15@gmail.com</a></span>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <div class="contact-method">
+                                            <span class="icon solid alt fa-home"></span>
+                                            <h3>Art Portfolio</h3>
+                                            <a href="https://darrentjw15.weebly.com" class="button primary fit">Click Here</a>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <div class="contact-method">
+                                            <span class="icon solid alt fa-home"></span>
+                                            <h3>Old Website (Defunct)</h3>
+                                            <a href="https://sgcharts13.wordpress.com" class="button primary fit">Click Here</a>
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                        </section>
+
+                    <!-- Footer -->
+                        <footer id="footer">
+                            <div class="inner">
+                                <ul class="icons">
+                                    <li><a href="https://twitter.com/sgcharts13" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="https://instagram.com/sgcharts13?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="https://sgcharts13.github.io" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                                    <li><a href="https://www.linkedin.com/in/teo-jin-wee-darren-331131268" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                                </ul>
+                                <ul class="copyright">
+                                    <li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                                </ul>
+                            </div>
+                        </footer>
+
+                </div>
+
+            <!-- Scripts -->
+                <script src="../../assets/js/jquery.min.js"></script>
+                <script src="../../assets/js/jquery.scrolly.min.js"></script>
+                <script src="../../assets/js/jquery.scrollex.min.js"></script>
+                <script src="../../assets/js/browser.min.js"></script>
+                <script src="../../assets/js/breakpoints.min.js"></script>
+                <script src="../../assets/js/util.js"></script>
+                <script src="../../assets/js/main.js"></script>
+
+        </body>
+    </html>
